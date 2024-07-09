@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/IGuerreroV/festival-musica/issues"
   },
-  "homepage": "https://github.com/IGuerreroV/festival-musica#readme"
+  "homepage": "https://github.com/IGuerreroV/festival-musica#readme",
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
 }

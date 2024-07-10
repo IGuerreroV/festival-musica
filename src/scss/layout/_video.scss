@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
+    position: relative;
+    .overlay {
+        position: absolute;
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%),
+            rgba( darken( v.$morado, 20% ), 90% )
+        );
+        inset: 0;
+    }
+
+    video {
+
+    }
+}
+
+.contenido-video {
+
+    h2 {
+
+    }
+    p {
+        
+    }
+}

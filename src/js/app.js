@@ -22,14 +22,19 @@ function crearGaleria() {
 }
 
 function mostrarImagen(i) {
-    
+    const imagen = document.createElement('IMG')
+    imagen.src = `src/img/gallery/full/${i}.jpg`
+    imagen.alt = 'Imagen Galería'
+
     // Generar Modal
     const modal = document.createElement('DIV')
     modal.classList.add('modal')
     modal.onclick = cerrarModal
+    modal.appendChild(imagen)
 
     // Agregar al HTML
     const body = document.querySelector('body')
+    body.classList.add('overflow-hidden')
     body.appendChild(modal)
 
     console.log(modal);
@@ -37,5 +42,12 @@ function mostrarImagen(i) {
 
 function cerrarModal() {
     const modal = document.querySelector('.modal')
-    modal?.remove()
+    modal.classList.add('fade-out')
+
+    setTimeout(() => {
+        modal?.remove()
+
+        const body = document.querySelector('body')
+        body.classList.remove('overflow-hidden')
+    }, 500)
 }
